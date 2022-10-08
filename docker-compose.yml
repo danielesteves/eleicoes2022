@@ -1,0 +1,17 @@
+version: "3.9"
+services:
+  test:
+    image: "eleicoes2022"
+    volumes:
+      - .:/app
+    command: python3 -m pytest
+  lab:
+    image: "eleicoes2022"
+    volumes:
+      - .:/app
+    command: python3 lab.py
+  run:
+    image: "eleicoes2022"
+    volumes:
+      - .:/app
+    command: python3 main.py
