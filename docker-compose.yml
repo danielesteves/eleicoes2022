@@ -5,13 +5,13 @@ services:
     volumes:
       - .:/app
     command: python3 -m pytest
-  lab:
+  download:
     image: "eleicoes2022"
     volumes:
       - .:/app
-    command: python3 lab.py
+    command: python3 src/downloader.py
   run:
     image: "eleicoes2022"
     volumes:
       - .:/app
-    command: python3 main.py
+    command: python3 src/main.py
